@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="br.com.zup.desafirickmorth.ui.home.HomeFragment"
+        android:name="br.com.zup.desafirickmorth.ui.home.view.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -16,6 +16,6 @@
     </fragment>
     <fragment
         android:id="@+id/detallFragment"
-        android:name="br.com.zup.desafirickmorth.ui.detallPerson.detallFragment"
+        android:name="br.com.zup.desafirickmorth.ui.detallPerson.view.detallFragment"
         android:label="detallFragment" />
 </navigation>
