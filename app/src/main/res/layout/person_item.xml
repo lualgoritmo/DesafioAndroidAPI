@@ -13,8 +13,8 @@
 
         <ImageView
             android:id="@+id/ivImagePerson"
-            android:layout_width="325dp"
-            android:layout_height="244dp"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
             android:layout_margin="16dp"
             android:layout_marginTop="16dp"
             android:contentDescription="Imagem do personagem"
@@ -30,7 +30,7 @@
             android:layout_marginTop="52dp"
             android:text="TESTANDO"
             android:gravity="center"
-            android:textSize="@dimen/txtSize_15"
+            android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ivImagePerson" />

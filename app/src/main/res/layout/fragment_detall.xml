@@ -7,12 +7,12 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="700dp">
+        android:layout_height="wrap_content">
 
         <ImageView
             android:id="@+id/ivImageViewTeste"
-            android:layout_width="354dp"
-            android:layout_height="117dp"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
             android:layout_marginTop="16dp"
             android:src="@drawable/rick_morty_image"
             app:layout_constraintEnd_toEndOf="parent"
@@ -21,15 +21,63 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            android:id="@+id/ivTxtName"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:scrollbarSize="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="@dimen/marginLeft_20"
+            android:padding="@dimen/txtPadding_6dp"
             android:text="Testando"
+            android:textSize="@dimen/txtSize_15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivImageViewTeste" />
+
+        <TextView
+            android:id="@+id/ivTxtStatus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:layout_marginLeft="@dimen/marginLeft_20"
+            android:padding="@dimen/txtPadding_6dp"
+            android:text="Testando DOIS"
+            android:textSize="@dimen/txtSize_15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivTxtName" />
+
+        <TextView
+            android:id="@+id/ivTxtSpecie"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginLeft="@dimen/marginLeft_20"
+            android:padding="@dimen/txtPadding_6dp"
+            android:text="Testando Três"
+            android:textSize="@dimen/txtSize_15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivTxtStatus" />
+
+        <TextView
+            android:id="@+id/ivTxtGern"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/marginLeft_20"
+            android:padding="@dimen/txtPadding_6dp"
+            android:text="Testando QUATRO"
+            android:textSize="@dimen/txtSize_15sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ivImageViewTeste" />
+            app:layout_constraintTop_toBottomOf="@+id/ivTxtSpecie" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>
