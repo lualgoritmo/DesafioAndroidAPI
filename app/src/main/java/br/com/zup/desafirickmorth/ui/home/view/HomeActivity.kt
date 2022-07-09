@@ -1,13 +1,14 @@
 package br.com.zup.desafirickmorth.ui.home.view
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
-import br.com.zup.desafirickmorth.R
 import br.com.zup.desafirickmorth.databinding.ActivityHomeBinding
+import br.com.zup.desafirickmorth.ui.home.viewmodel.PersonViewModel
 
 class HomeActivity : AppCompatActivity() {
     private lateinit var binding: ActivityHomeBinding
@@ -17,10 +18,10 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        navHostFragment =
-            supportFragmentManager.findFragmentById(binding.navHostFragment.id) as NavHostFragment
-        val nav: NavController = navHostFragment.navController
-        NavigationUI.setupActionBarWithNavController(this, nav)
+//        navHostFragment =
+//            supportFragmentManager.findFragmentById(binding.navHostFragment.id) as NavHostFragment
+//        val nav: NavController = navHostFragment.navController
+//        NavigationUI.setupActionBarWithNavController(this, nav)
 
     }
 

@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import br.com.zup.desafirickmorth.databinding.PersonItemBinding
 import br.com.zup.desafirickmorth.domain.Person
+import com.squareup.picasso.Picasso
 
 class HomeAdapter(
     private var listPerson: MutableList<Person>,
@@ -27,7 +28,7 @@ class HomeAdapter(
 
     class ViewHolder(val binding: PersonItemBinding) : RecyclerView.ViewHolder(binding.root) {
         fun displayCharacterInformation(person: Person) {
-            binding.personImage.setImageResource(person.image)
+            Picasso.get().load(person.image).into(binding.personImage)
             binding.ivPersonName.text = person.name
         }
     }
