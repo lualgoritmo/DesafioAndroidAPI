@@ -1,3 +1,4 @@
 # DesafioAndroid
 Desafio Android Catalisa Rick And Morth
-#testando
+#layout finalizado
+#a camada ui finalizada
