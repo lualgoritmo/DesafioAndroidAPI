@@ -3,13 +3,13 @@ package br.com.zup.desafirickmorth.ui.home.view
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import br.com.zup.desafirickmorth.data.model.PersonResult
 import br.com.zup.desafirickmorth.databinding.PersonItemBinding
-import br.com.zup.desafirickmorth.domain.Person
 import com.squareup.picasso.Picasso
 
 class HomeAdapter(
-    private var listPerson: MutableList<Person>,
-    private var clickDetallPerson: (person: Person) -> Unit
+    private var listPerson: MutableList<PersonResult>,
+    private var clickDetallPerson: (person: PersonResult) -> Unit
 ) : RecyclerView.Adapter<HomeAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeAdapter.ViewHolder {
         val binding = PersonItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -27,9 +27,12 @@ class HomeAdapter(
     override fun getItemCount() = listPerson.size
 
     class ViewHolder(val binding: PersonItemBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun displayCharacterInformation(person: Person) {
+        fun displayCharacterInformation(person: PersonResult) {
             Picasso.get().load(person.image).into(binding.personImage)
             binding.ivPersonName.text = person.name
         }
+    }
+    fun updatePerson(newListPersons: MutableList<PersonResult>) {
+        listPerson = newListPersons
     }
 }

@@ -18,10 +18,10 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
-//        navHostFragment =
-//            supportFragmentManager.findFragmentById(binding.navHostFragment.id) as NavHostFragment
-//        val nav: NavController = navHostFragment.navController
-//        NavigationUI.setupActionBarWithNavController(this, nav)
+        navHostFragment =
+            supportFragmentManager.findFragmentById(binding.navHostFragment.id) as NavHostFragment
+        val nav: NavController = navHostFragment.navController
+        NavigationUI.setupActionBarWithNavController(this, nav)
 
     }
 

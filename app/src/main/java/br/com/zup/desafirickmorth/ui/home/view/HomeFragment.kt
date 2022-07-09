@@ -11,13 +11,13 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.zup.desafirickmorth.R
 import br.com.zup.desafirickmorth.constants.PERSONAGENS
+import br.com.zup.desafirickmorth.data.model.PersonResult
 import br.com.zup.desafirickmorth.databinding.FragmentHomeBinding
-import br.com.zup.desafirickmorth.domain.Person
 import br.com.zup.desafirickmorth.ui.home.viewmodel.PersonViewModel
 
 class HomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding
-    private var persons = mutableListOf<Person>()
+    private var persons = mutableListOf<PersonResult>()
     private val personAdapter by lazy {
         HomeAdapter(arrayListOf(), this::clickPersonDetall)
     }
@@ -37,9 +37,11 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         showRecyclerView()
+        viewModel.getAllPeson()
+        initViewPerson()
     }
 
-    private fun clickPersonDetall(person: Person) {
+    private fun clickPersonDetall(person: PersonResult) {
         val bundle = bundleOf(PERSONAGENS to persons)
         NavHostFragment.findNavController(this)
             .navigate(R.id.action_homeFragment_to_detallFragment, bundle)
@@ -51,8 +53,8 @@ class HomeFragment : Fragment() {
     }
 
     private fun initViewPerson() {
-        viewModel.personResponse.observe(this) {
-
+        viewModel.personResponse.observe(this.viewLifecycleOwner) {
+            personAdapter.updatePerson(it as MutableList<PersonResult>)
         }
     }
 }

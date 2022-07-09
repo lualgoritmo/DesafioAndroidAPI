@@ -3,17 +3,17 @@ package br.com.zup.desafirickmorth.data.model
 
 import com.google.gson.annotations.SerializedName
 
-data class Result(
+data class PersonResult(
     @SerializedName("gender")
-    val gender: String,
+    var gender: String,
     @SerializedName("id")
-    val id: Int,
+    var id: Int,
     @SerializedName("image")
-    val image: String,
+    var image: String,
     @SerializedName("name")
-    val name: String,
+    var name: String,
     @SerializedName("species")
-    val species: String,
+    var species: String,
     @SerializedName("status")
-    val status: String,
+    var status: String,
 )
