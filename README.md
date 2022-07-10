@@ -1,5 +1,7 @@
 # DesafioAndroid
-Desafio Android Catalisa Rick And Morth
-#layout finalizado
-#a camada ui finalizada
-#Tentando iniciar a consumação da API
+Deaf Android Catalisa Rick And Morth
+#Layout da  tela de Home finalizada
+#Layout da tela de detalhe finalizado
+# Layouts prontos de acordo com os requisitos
+#consumação de api na tela de home finalizado, exibindo lista de personagens
+#consumação de api na tela de detalhes finalizada, exibindo os detalhes do personagem
