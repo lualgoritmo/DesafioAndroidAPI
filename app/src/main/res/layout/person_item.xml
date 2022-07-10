@@ -9,10 +9,10 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/color_pr"
+        android:layout_gravity="center_horizontal"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
-        android:layout_gravity="center_horizontal">
+        android:background="@color/color_pr">
 
         <ImageView
             android:id="@+id/personImage"
@@ -21,16 +21,16 @@
             android:contentDescription="Imagem do pesonagem de Rick and Morty"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/ivPersonName"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:text=""
             android:textColor="@color/color_spr"
             android:textSize="14sp"
-            android:gravity="center"
             app:layout_constraintEnd_toEndOf="@id/personImage"
             app:layout_constraintStart_toStartOf="@id/personImage"
             app:layout_constraintTop_toBottomOf="@id/personImage" />

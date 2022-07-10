@@ -1,8 +1,8 @@
 package br.com.zup.desafirickmorth.ui.splach
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import br.com.zup.desafirickmorth.R
 import br.com.zup.desafirickmorth.ui.home.view.HomeActivity
 import java.util.*

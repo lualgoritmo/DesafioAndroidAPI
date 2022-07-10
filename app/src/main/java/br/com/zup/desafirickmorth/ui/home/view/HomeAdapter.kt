@@ -32,6 +32,7 @@ class HomeAdapter(
             binding.ivPersonName.text = person.name
         }
     }
+
     fun updatePerson(newListPersons: MutableList<PersonResult>) {
         listPerson = newListPersons
         notifyDataSetChanged()

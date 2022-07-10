@@ -7,7 +7,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import br.com.zup.desafirickmorth.data.datasource.remote.RetrofitService
 import br.com.zup.desafirickmorth.data.model.PersonResult
-import br.com.zup.desafirickmorth.data.model.RickAndMortyResponse
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
