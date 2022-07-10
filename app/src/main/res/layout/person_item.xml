@@ -2,12 +2,17 @@
 
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:backgroundTintMode="@color/color_pr">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/color_pr"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal">
 
         <ImageView
             android:id="@+id/personImage"
@@ -15,16 +20,19 @@
             android:layout_height="150dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"/>
+
         <TextView
             android:id="@+id/ivPersonName"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/personImage"
+            android:text="TESTANDO"
+            android:textColor="@color/color_spr"
+            android:textSize="14sp"
+            android:gravity="center"
             app:layout_constraintEnd_toEndOf="@id/personImage"
             app:layout_constraintStart_toStartOf="@id/personImage"
-            android:textSize="14sp"
-            android:text="TESTANDO"/>
+            app:layout_constraintTop_toBottomOf="@id/personImage" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>

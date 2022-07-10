@@ -8,7 +8,7 @@ import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.NavHostFragment
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.GridLayoutManager
 import br.com.zup.desafirickmorth.R
 import br.com.zup.desafirickmorth.constants.PERSONAGENS
 import br.com.zup.desafirickmorth.data.model.PersonResult
@@ -17,7 +17,6 @@ import br.com.zup.desafirickmorth.ui.home.viewmodel.PersonViewModel
 
 class HomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding
-    private var persons = mutableListOf<PersonResult>()
     private val personAdapter by lazy {
         HomeAdapter(arrayListOf(), this::clickPersonDetall)
     }
@@ -30,26 +29,26 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding = FragmentHomeBinding.inflate(layoutInflater)
+        binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+    override fun onResume() {
+        super.onResume()
         showRecyclerView()
         viewModel.getAllPeson()
         initViewPerson()
     }
 
     private fun clickPersonDetall(person: PersonResult) {
-        val bundle = bundleOf(PERSONAGENS to persons)
+        val bundle = bundleOf(PERSONAGENS to person)
         NavHostFragment.findNavController(this)
             .navigate(R.id.action_homeFragment_to_detallFragment, bundle)
     }
 
     private fun showRecyclerView() {
         binding.rvListPerson.adapter = personAdapter
-        binding.rvListPerson.layoutManager = LinearLayoutManager(context)
+        binding.rvListPerson.layoutManager = GridLayoutManager(context, 2)
     }
 
     private fun initViewPerson() {

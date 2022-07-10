@@ -11,12 +11,12 @@ class HomeAdapter(
     private var listPerson: MutableList<PersonResult>,
     private var clickDetallPerson: (person: PersonResult) -> Unit
 ) : RecyclerView.Adapter<HomeAdapter.ViewHolder>() {
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding = PersonItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: HomeAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val person = listPerson[position]
         holder.displayCharacterInformation(person)
         holder.itemView.setOnClickListener {
@@ -34,5 +34,6 @@ class HomeAdapter(
     }
     fun updatePerson(newListPersons: MutableList<PersonResult>) {
         listPerson = newListPersons
+        notifyDataSetChanged()
     }
 }
