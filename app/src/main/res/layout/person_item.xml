@@ -18,6 +18,7 @@
             android:id="@+id/personImage"
             android:layout_width="150dp"
             android:layout_height="150dp"
+            android:contentDescription="Imagem do pesonagem de Rick and Morty"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
@@ -26,7 +27,7 @@
             android:id="@+id/ivPersonName"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:text="TESTANDO"
+            android:text=""
             android:textColor="@color/color_spr"
             android:textSize="14sp"
             android:gravity="center"
