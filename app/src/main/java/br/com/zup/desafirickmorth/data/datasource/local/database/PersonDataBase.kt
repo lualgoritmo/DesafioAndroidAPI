@@ -4,11 +4,10 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import androidx.room.TypeConverters
 import br.com.zup.desafirickmorth.data.datasource.local.dao.PersonDao
 import br.com.zup.desafirickmorth.data.model.PersonResult
 
-@Database(entities = [PersonResult::class], version = 1)
+@Database(entities = [PersonResult::class], version = 2)
 abstract class PersonDataBase : RoomDatabase() {
     abstract fun personDao(): PersonDao
 

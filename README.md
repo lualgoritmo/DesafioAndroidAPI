@@ -6,3 +6,4 @@ Deaf Android Catalisa Rick And Morth
 #consumação de api na tela de home finalizado, exibindo lista de personagens
 #consumação de api na tela de detalhes finalizada, exibindo os detalhes do personagem
 #Revisão do layout e consumação da API, finalizado
+#manter as informações dos personagens offilene, finalizada
