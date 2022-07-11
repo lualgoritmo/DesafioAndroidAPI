@@ -3,5 +3,5 @@
     <dimen name="txtSize_15sp">15sp</dimen>
     <dimen name="txtSize_15">15sp</dimen>
     <dimen name="txtPadding_6dp">6dp</dimen>
-    <dimen name="marginLeft_20">22dp</dimen>
+    <dimen name="marginLeft_75">75dp</dimen>
 </resources>
