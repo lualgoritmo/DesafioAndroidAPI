@@ -31,7 +31,6 @@ class detallFragment : Fragment() {
     private fun showDetails() {
         val persons = arguments?.getParcelable<PersonResult>(PERSONAGENS)
         persons?.let {
-            //RECEBER OS NOMES ACTIONbAR
             (activity as AppCompatActivity).supportActionBar?.title = it.name
             Picasso.get().load(it.image).into(binding.ivImageView)
             binding.ivTxtName.text = "nome: ${it.name}"

@@ -1,31 +1,41 @@
 package br.com.zup.desafirickmorth.ui.home.viewmodel
 
 import android.app.Application
-import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import br.com.zup.desafirickmorth.data.model.PersonResult
 import br.com.zup.desafirickmorth.domain.useCase.PersonUseCase
-import kotlinx.coroutines.Dispatchers
+import br.com.zup.desafirickmorth.ui.home.viewstate.PersonViewState
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 
 class PersonViewModel(application: Application) : AndroidViewModel(application) {
-    private val _personResponse = MutableLiveData<List<PersonResult>>()
-    val personResponse: LiveData<List<PersonResult>> = _personResponse
-    val personUseCase = PersonUseCase(application)
+    //    private val _personResponse = MutableLiveData<List<PersonResult>>()
+//    val personResponse: LiveData<List<PersonResult>> = _personResponse
+//    val personUseCase = PersonUseCase(application)
+    private val _personResponse = MutableLiveData<PersonViewState>()
+    val personResponse: LiveData<PersonViewState> = _personResponse
+    private val useCase = PersonUseCase(application)
+
     fun getAllPeson() {
         viewModelScope.launch {
+            _personResponse.value = PersonViewState.Loading
             try {
-                val response = withContext(Dispatchers.IO) {
-                    personUseCase.getAllPerson()
-                }
-                _personResponse.value = response
+                 val response = useCase.getAllPerson()
+                _personResponse.value = PersonViewState.Success(response)
             } catch (ex: Exception) {
-                Log.i("Error", "${ex.message}")
+                _personResponse.value = PersonViewState.Error(ex.message ?: "Erro aqui")
             }
         }
+//        viewModelScope.launch {
+//            try {
+//                val response = withContext(Dispatchers.IO) {
+//                    personUseCase.getAllPerson()
+//                }
+//                _personResponse.value = response
+//            } catch (ex: Exception) {
+//                Log.i("Error", "${ex.message}")
+//            }
+//        }
     }
 }

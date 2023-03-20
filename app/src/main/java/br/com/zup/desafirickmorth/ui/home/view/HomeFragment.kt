@@ -13,6 +13,7 @@ import br.com.zup.desafirickmorth.R
 import br.com.zup.desafirickmorth.constants.PERSONAGENS
 import br.com.zup.desafirickmorth.data.model.PersonResult
 import br.com.zup.desafirickmorth.databinding.FragmentHomeBinding
+import br.com.zup.desafirickmorth.ui.home.viewstate.PersonViewState
 import br.com.zup.desafirickmorth.ui.home.viewmodel.PersonViewModel
 
 class HomeFragment : Fragment() {
@@ -30,6 +31,7 @@ class HomeFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentHomeBinding.inflate(inflater, container, false)
+        init()
         return binding.root
     }
 
@@ -37,7 +39,29 @@ class HomeFragment : Fragment() {
         super.onResume()
         showRecyclerView()
         viewModel.getAllPeson()
-        initViewPerson()
+    }
+
+    private fun init() = viewModel.personResponse.observe(viewLifecycleOwner) {result ->
+        when(result){
+            is PersonViewState.Loading -> showLoading()
+            is PersonViewState.Success -> showPersons(result.persons)
+            is PersonViewState.Error -> showError(result.message)
+        }
+    }
+
+    private fun showLoading() {
+        binding.apply { View.VISIBLE }
+    }
+
+    private fun showPersons(persons: List<PersonResult>) {
+        personAdapter.updatePerson(persons as MutableList<PersonResult>)
+    }
+
+    private fun showError(errorMessage: String) {
+        binding.apply {
+            errorMessage
+            View.GONE
+        }
     }
 
     private fun clickPersonDetall(person: PersonResult) {
@@ -51,9 +75,15 @@ class HomeFragment : Fragment() {
         binding.rvListPerson.layoutManager = GridLayoutManager(context, 2)
     }
 
-    private fun initViewPerson() {
-        viewModel.personResponse.observe(this.viewLifecycleOwner) {
-            personAdapter.updatePerson(it as MutableList<PersonResult>)
-        }
-    }
+//    private fun initViewPerson() {
+//        viewModel.personResponse.observe(this.viewLifecycleOwner) {
+//            personAdapter.updatePerson(it as MutableList<PersonResult>)
+//        }
+//    }
+
+//    private fun initViewPerson() {
+//        viewModel.personResponse.observe(this.viewLifecycleOwner) {
+//            personAdapter.updatePerson(it as MutableList<PersonResult>)
+//        }
+//    }
 }

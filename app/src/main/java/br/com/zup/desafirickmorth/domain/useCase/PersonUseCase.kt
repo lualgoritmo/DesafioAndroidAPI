@@ -8,6 +8,7 @@ import br.com.zup.desafirickmorth.domain.repository.PersonRepository
 class PersonUseCase(application: Application) {
     val personDao = PersonDataBase.getDatabase(application).personDao()
     val repository = PersonRepository(personDao)
+
     suspend fun getAllPersonDao(): List<PersonResult> {
         return repository.getAllPersonDao()
     }

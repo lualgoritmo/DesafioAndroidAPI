@@ -12,5 +12,6 @@ class PersonRepository(private val personDao: PersonDao) {
     suspend fun getAllPerson(): RickAndMortyResponse {
         return RetrofitService.apiService.getAllPerson()
     }
-    suspend fun getAllPersonDao(): List<PersonResult> = personDao.getAllPersonDao()
+    suspend fun getAllPersonDao(): List<PersonResult> =
+        personDao.getAllPersonDao()
 }
