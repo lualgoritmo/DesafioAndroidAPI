@@ -1,4 +1,4 @@
-package br.com.zup.desafirickmorth.data.model
+package br.com.zup.desafirickmorth.domain.repository.data.model
 
 
 import com.google.gson.annotations.SerializedName

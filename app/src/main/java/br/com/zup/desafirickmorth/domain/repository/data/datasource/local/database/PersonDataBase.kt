@@ -1,11 +1,11 @@
-package br.com.zup.desafirickmorth.data.datasource.local.database
+package br.com.zup.desafirickmorth.domain.repository.data.datasource.local.database
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import br.com.zup.desafirickmorth.data.datasource.local.dao.PersonDao
-import br.com.zup.desafirickmorth.data.model.PersonResult
+import br.com.zup.desafirickmorth.domain.repository.data.datasource.local.dao.PersonDao
+import br.com.zup.desafirickmorth.domain.repository.data.model.PersonResult
 
 @Database(entities = [PersonResult::class], version = 2)
 abstract class PersonDataBase : RoomDatabase() {

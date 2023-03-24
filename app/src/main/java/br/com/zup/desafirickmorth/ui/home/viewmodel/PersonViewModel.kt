@@ -1,21 +1,17 @@
 package br.com.zup.desafirickmorth.ui.home.viewmodel
 
-import android.app.Application
-import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import br.com.zup.desafirickmorth.domain.useCase.PersonUseCase
 import br.com.zup.desafirickmorth.ui.home.viewstate.PersonViewState
 import kotlinx.coroutines.launch
 
-class PersonViewModel(application: Application) : AndroidViewModel(application) {
-    //    private val _personResponse = MutableLiveData<List<PersonResult>>()
-//    val personResponse: LiveData<List<PersonResult>> = _personResponse
-//    val personUseCase = PersonUseCase(application)
+class PersonViewModel(private val useCase: PersonUseCase) : ViewModel() {
+
     private val _personResponse = MutableLiveData<PersonViewState>()
     val personResponse: LiveData<PersonViewState> = _personResponse
-    private val useCase = PersonUseCase(application)
 
     fun getAllPeson() {
         viewModelScope.launch {
@@ -27,15 +23,5 @@ class PersonViewModel(application: Application) : AndroidViewModel(application) 
                 _personResponse.value = PersonViewState.Error(ex.message ?: "Erro aqui")
             }
         }
-//        viewModelScope.launch {
-//            try {
-//                val response = withContext(Dispatchers.IO) {
-//                    personUseCase.getAllPerson()
-//                }
-//                _personResponse.value = response
-//            } catch (ex: Exception) {
-//                Log.i("Error", "${ex.message}")
-//            }
-//        }
     }
 }
