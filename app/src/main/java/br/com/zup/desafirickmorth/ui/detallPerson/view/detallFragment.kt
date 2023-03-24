@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import br.com.zup.desafirickmorth.constants.PERSONAGENS
-import br.com.zup.desafirickmorth.domain.repository.data.model.PersonResult
+import br.com.zup.desafirickmorth.data.model.PersonResult
 import br.com.zup.desafirickmorth.databinding.FragmentDetallBinding
 import com.squareup.picasso.Picasso
 

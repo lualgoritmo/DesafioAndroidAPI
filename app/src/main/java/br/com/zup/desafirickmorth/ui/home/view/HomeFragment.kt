@@ -10,11 +10,10 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.GridLayoutManager
 import br.com.zup.desafirickmorth.R
 import br.com.zup.desafirickmorth.constants.PERSONAGENS
-import br.com.zup.desafirickmorth.domain.repository.data.model.PersonResult
+import br.com.zup.desafirickmorth.data.model.PersonResult
 import br.com.zup.desafirickmorth.databinding.FragmentHomeBinding
 import br.com.zup.desafirickmorth.ui.home.viewmodel.PersonViewModel
 import br.com.zup.desafirickmorth.ui.home.viewstate.PersonViewState
-import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class HomeFragment : Fragment() {

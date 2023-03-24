@@ -3,7 +3,7 @@ package br.com.zup.desafirickmorth.ui.home.view
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import br.com.zup.desafirickmorth.domain.repository.data.model.PersonResult
+import br.com.zup.desafirickmorth.data.model.PersonResult
 import br.com.zup.desafirickmorth.databinding.PersonItemBinding
 import com.squareup.picasso.Picasso
 

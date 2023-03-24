@@ -1,6 +1,6 @@
 package br.com.zup.desafirickmorth.domain.useCase
 
-import br.com.zup.desafirickmorth.domain.repository.data.model.PersonResult
+import br.com.zup.desafirickmorth.data.model.PersonResult
 import br.com.zup.desafirickmorth.domain.repository.PersonRepository
 
 class PersonUseCase(private val repository: PersonRepository) {

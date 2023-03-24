@@ -1,4 +1,4 @@
-package br.com.zup.desafirickmorth.domain.repository.data.model
+package br.com.zup.desafirickmorth.data.model
 
 
 import android.os.Parcelable

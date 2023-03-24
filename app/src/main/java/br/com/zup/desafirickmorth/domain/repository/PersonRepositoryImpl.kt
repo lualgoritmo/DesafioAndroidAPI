@@ -1,9 +1,9 @@
 package br.com.zup.desafirickmorth.domain.repository
 
-import br.com.zup.desafirickmorth.domain.repository.data.datasource.local.dao.PersonDao
-import br.com.zup.desafirickmorth.domain.repository.data.datasource.remote.PersonRetrofitService
-import br.com.zup.desafirickmorth.domain.repository.data.model.PersonResult
-import br.com.zup.desafirickmorth.domain.repository.data.model.RickAndMortyResponse
+import br.com.zup.desafirickmorth.data.datasource.local.dao.PersonDao
+import br.com.zup.desafirickmorth.data.datasource.remote.PersonRetrofitService
+import br.com.zup.desafirickmorth.data.model.PersonResult
+import br.com.zup.desafirickmorth.data.model.RickAndMortyResponse
 
 class PersonRepositoryImpl(
     private val personDao: PersonDao,
