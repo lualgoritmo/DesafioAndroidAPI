@@ -72,7 +72,7 @@ class HomeFragment : Fragment() {
 
     private fun showRecyclerView() {
         binding.rvListPerson.adapter = personAdapter
-        binding.rvListPerson.layoutManager = GridLayoutManager(context, 2)
+        binding.rvListPerson.layoutManager = GridLayoutManager(context, 3)
     }
 
 //    private fun initViewPerson() {
