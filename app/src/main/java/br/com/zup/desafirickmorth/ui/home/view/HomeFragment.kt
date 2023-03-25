@@ -6,24 +6,27 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.GridLayoutManager
 import br.com.zup.desafirickmorth.R
 import br.com.zup.desafirickmorth.constants.PERSONAGENS
 import br.com.zup.desafirickmorth.data.model.PersonResult
 import br.com.zup.desafirickmorth.databinding.FragmentHomeBinding
-import br.com.zup.desafirickmorth.ui.home.viewstate.PersonViewState
 import br.com.zup.desafirickmorth.ui.home.viewmodel.PersonViewModel
+import br.com.zup.desafirickmorth.ui.home.viewstate.PersonViewState
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class HomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding
     private val personAdapter by lazy {
         HomeAdapter(arrayListOf(), this::clickPersonDetall)
     }
-    private val viewModel: PersonViewModel by lazy {
-        ViewModelProvider(this)[PersonViewModel::class.java]
-    }
+
+//    private val personAdapter by inject<HomeAdapter>()
+    //    private val viewModel: PersonViewModel by lazy {
+//        ViewModelProvider(this)[PersonViewModel::class.java]
+//    }
+    private val personViewModel by viewModel<PersonViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -38,11 +41,11 @@ class HomeFragment : Fragment() {
     override fun onResume() {
         super.onResume()
         showRecyclerView()
-        viewModel.getAllPeson()
+        personViewModel.getAllPeson()
     }
 
-    private fun init() = viewModel.personResponse.observe(viewLifecycleOwner) {result ->
-        when(result){
+    private fun init() = personViewModel.personResponse.observe(viewLifecycleOwner) { result ->
+        when (result) {
             is PersonViewState.Loading -> showLoading()
             is PersonViewState.Success -> showPersons(result.persons)
             is PersonViewState.Error -> showError(result.message)
@@ -72,6 +75,6 @@ class HomeFragment : Fragment() {
 
     private fun showRecyclerView() {
         binding.rvListPerson.adapter = personAdapter
-        binding.rvListPerson.layoutManager = GridLayoutManager(context, 2)
+        binding.rvListPerson.layoutManager = GridLayoutManager(context, 3)
     }
 }

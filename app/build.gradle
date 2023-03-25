@@ -37,9 +37,11 @@ android {
     viewBinding {
         enabled = true
     }
+    namespace 'br.com.zup.desafirickmorth'
 }
 
 dependencies {
+    def koin_version = "3.3.3"
 
     implementation 'androidx.core:core-ktx:1.8.0'
     implementation 'androidx.appcompat:appcompat:1.4.2'
@@ -79,4 +81,7 @@ dependencies {
     //############ ROOM DATABASE ############
     implementation("androidx.room:room-runtime:2.4.2")
     kapt("androidx.room:room-compiler:2.4.2")
+
+    //KOIN
+    implementation ("io.insert-koin:koin-android:$koin_version")
 }
