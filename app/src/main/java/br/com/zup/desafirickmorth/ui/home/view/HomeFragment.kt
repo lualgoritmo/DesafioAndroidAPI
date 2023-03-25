@@ -72,18 +72,6 @@ class HomeFragment : Fragment() {
 
     private fun showRecyclerView() {
         binding.rvListPerson.adapter = personAdapter
-        binding.rvListPerson.layoutManager = GridLayoutManager(context, 3)
+        binding.rvListPerson.layoutManager = GridLayoutManager(context, 2)
     }
-
-//    private fun initViewPerson() {
-//        viewModel.personResponse.observe(this.viewLifecycleOwner) {
-//            personAdapter.updatePerson(it as MutableList<PersonResult>)
-//        }
-//    }
-
-//    private fun initViewPerson() {
-//        viewModel.personResponse.observe(this.viewLifecycleOwner) {
-//            personAdapter.updatePerson(it as MutableList<PersonResult>)
-//        }
-//    }
 }
