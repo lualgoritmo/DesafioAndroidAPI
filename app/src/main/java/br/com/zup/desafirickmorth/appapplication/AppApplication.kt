@@ -11,13 +11,14 @@ class AppApplication : Application() {
         startKoin {
             androidContext(this@AppApplication)
             modules(
-               listOf(
-                   daoModule,
-                   netWorkModule,
-                   repositoryImpl,
-                   useCaseModule,
-                   personViewModelModule,
-                   personModule)
+                listOf(
+                    daoModule,
+                    netWorkModule,
+                    adapterPersonModule,
+                    repositoryImpl,
+                    useCaseModule,
+                    personViewModelModule,
+                )
             )
         }
     }

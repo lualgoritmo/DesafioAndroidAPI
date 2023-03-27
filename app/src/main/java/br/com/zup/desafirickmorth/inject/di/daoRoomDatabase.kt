@@ -5,8 +5,6 @@ import org.koin.android.ext.koin.androidContext
 import org.koin.dsl.module
 
 val daoModule = module {
-    single {
-        PersonDataBase.getDatabase(androidContext())
-            .personDao()
-    }
+    single { PersonDataBase.getDatabase(androidContext())
+            .personDao() }
 }

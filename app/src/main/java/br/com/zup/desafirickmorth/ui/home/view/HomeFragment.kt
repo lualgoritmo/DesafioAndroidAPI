@@ -14,19 +14,17 @@ import br.com.zup.desafirickmorth.data.model.PersonResult
 import br.com.zup.desafirickmorth.databinding.FragmentHomeBinding
 import br.com.zup.desafirickmorth.ui.home.viewmodel.PersonViewModel
 import br.com.zup.desafirickmorth.ui.home.viewstate.PersonViewState
+import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
+import org.koin.core.parameter.parametersOf
 
 class HomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding
-    private val personAdapter by lazy {
-        HomeAdapter(arrayListOf(), this::clickPersonDetall)
+    private val personAdapter: HomeAdapter by inject {
+        parametersOf(mutableListOf<PersonResult>(),
+            this::clickPersonDetall)
     }
-
-//    private val personAdapter by inject<HomeAdapter>()
-    //    private val viewModel: PersonViewModel by lazy {
-//        ViewModelProvider(this)[PersonViewModel::class.java]
-//    }
-    private val personViewModel by viewModel<PersonViewModel>()
+    private val personViewModel: PersonViewModel by viewModel()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -41,7 +39,7 @@ class HomeFragment : Fragment() {
     override fun onResume() {
         super.onResume()
         showRecyclerView()
-        personViewModel.getAllPeson()
+        personViewModel.getAllPerson()
     }
 
     private fun init() = personViewModel.personResponse.observe(viewLifecycleOwner) { result ->
@@ -75,6 +73,6 @@ class HomeFragment : Fragment() {
 
     private fun showRecyclerView() {
         binding.rvListPerson.adapter = personAdapter
-        binding.rvListPerson.layoutManager = GridLayoutManager(context, 3)
+        binding.rvListPerson.layoutManager = GridLayoutManager(context, 2)
     }
 }

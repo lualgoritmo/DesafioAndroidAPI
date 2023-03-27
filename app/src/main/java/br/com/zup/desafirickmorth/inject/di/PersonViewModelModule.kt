@@ -4,7 +4,5 @@ import br.com.zup.desafirickmorth.ui.home.viewmodel.PersonViewModel
 import org.koin.dsl.module
 
 val personViewModelModule = module {
-    factory {
-        PersonViewModel(useCase = get())
-    }
+    factory { PersonViewModel(personUseCase = get()) }
 }

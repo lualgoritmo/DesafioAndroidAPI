@@ -7,17 +7,16 @@ import br.com.zup.desafirickmorth.data.model.RickAndMortyResponse
 
 class PersonRepositoryImpl(
     private val personDao: PersonDao,
-    private val remoteGetPerson: PersonRetrofitService
+    private val remotePerson: PersonRetrofitService
 ) : PersonRepository {
 
-    override suspend fun insertPersonDao(personList: List<PersonResult>) {
-        personDao.insertPersonDao(personList)
-    }
+    override suspend fun insertPersonDao(personList: List<PersonResult>) = personDao
+        .insertPersonDao(personList)
+
 
     override suspend fun getAllPerson(): RickAndMortyResponse {
-        return remoteGetPerson.getAllPerson()
+        return remotePerson.getAllPerson()
     }
 
-    override suspend fun getAllPersonDao(): List<PersonResult> =
-        personDao.getAllPersonDao()
+    override suspend fun getAllPersonDao(): List<PersonResult> = personDao.getAllPersonDao()
 }
