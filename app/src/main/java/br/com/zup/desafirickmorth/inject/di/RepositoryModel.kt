@@ -19,3 +19,11 @@ val adapterPersonModule = module {
         HomeAdapter(listPerson, clickDetallPerson)
     }
 }
+
+val adapterPersonModule = module {
+    factory { (listPerson: MutableList<PersonResult>,
+                  clickDetallPerson: (person: PersonResult)
+                  -> Unit) ->
+        HomeAdapter(listPerson, clickDetallPerson)
+    }
+}
