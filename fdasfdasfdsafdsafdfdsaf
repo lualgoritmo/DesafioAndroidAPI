@@ -1,0 +1,210 @@
+[33mcommit a9f7e386e7e6eb4959eb1f34b915c4f657302762[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: 8ddeb16 05d2221
+Author: Luciano <lualgoritmo@outlook.com>
+Date:   Sat Mar 25 15:59:41 2023 -0300
+
+    Feito
+
+[33mcommit 8ddeb16d5c0c317e62f7034038a62e18b2aaac8e[m
+Author: Luciano <lualgoritmo@outlook.com>
+Date:   Sat Mar 25 15:36:15 2023 -0300
+
+    Projeto com API, Live Data e Viw State
+
+[33mcommit 7354b5fbead1bf68031abc9b3abcf2249a25ed1e[m
+Author: Luciano <lualgoritmo@outlook.com>
+Date:   Fri Mar 24 18:45:44 2023 -0300
+
+    Projeto com Live Data e View State
+
+[33mcommit 05d2221df9858be52e2e15e22c4669430a4f033f[m
+Author: Luciano <lualgoritmo@outlook.com>
+Date:   Fri Mar 24 18:19:44 2023 -0300
+
+    Colocar a pasta data no local correto
+
+[33mcommit b3c511514e208322169c0db7f540b639f01730a0[m
+Author: Luciano <lualgoritmo@outlook.com>
+Date:   Fri Mar 24 18:01:29 2023 -0300
+
+    Projeto com View State e Live Data
+
+[33mcommit c0a218d9c01e6c60c735bb51e3fb10f069defcfa[m
+Author: Luciano <lualgoritmo@outlook.com>
+Date:   Mon Mar 20 15:12:29 2023 -0300
+
+    Projeto com View State e Live Data
+
+[33mcommit 25b92ba232afb8667f7bf98660235043f0552bab[m
+Author: Luciano Garcia <lualgoritmo@outlook.com>
+Date:   Mon Jul 11 13:58:13 2022 -0300
+
+    Recuperação dos dados mentida mesmo offline
+
+[33mcommit d11b498b25d4f285c1100660b1bf70e331f7ae76[m
+Author: Luciano Garcia <lualgoritmo@outlook.com>
+Date:   Mon Jul 11 11:44:50 2022 -0300
+
+    Fazendo o dataBase
+
+[33mcommit e927f2a6f471d114443a1d2f301ed42ceef56d55[m
+Author: Luciano Garcia <lualgoritmo@outlook.com>
+Date:   Mon Jul 11 10:16:35 2022 -0300
+
+    Finalizado Layout detalhe
+
+[33mcommit 9ecb5a2f227f7938831014a4cc80fa8744cb4281[m
+Author: Luciano Garcia <lualgoritmo@outlook.com>
+Date:   Sun Jul 10 17:20:45 2022 -0300
+
+     Revisão de layout e consumação de API, finaliado/concluido
+
+[33mcommit 9a2b3506cffa8956b3e038ac59ecca26b3341c3c[m
+Author: Luciano Garcia <lualgoritmo@outlook.com>
+Date:   Sun Jul 10 17:05:59 2022 -0300
+
+    Revisado Layout e consumação de API, finalizado
+
+[33mcommit 8bcd5780a6b91027ff08e726908c592c3c836148[m
+Author: Luciano Garcia <lualgoritmo@outlook.com>
+Date:   Sun Jul 10 14:38:35 2022 -0300
+
+    Layout finalizado e consumação de API
+
+[33mcommit 5379647a9b503a457cf3064d4cf0944df0f688e2[m
+Author: Luciano Garcia <lualgoritmo@outlook.com>
+Date:   Sun Jul 10 13:35:42 2022 -0300
+
+    Layouts finalizado, consumação de api e
+
+[33mcommit b69f3d5e8379f6eb8d0b50003a530417b1a68bed[m
+Author: Luciano Garcia <lualgoritmo@outlook.com>
+Date:   Sun Jul 10 13:28:46 2022 -0300
+
+    Layout do detalhe finalizado consultando
+
+[33mcommit 3f80aeb6bdf63b0bed60e499132142d6e711f1f2[m
+Author: Luciano Garcia <lualgoritmo@outlook.com>
+Date:   Sun Jul 10 13:10:08 2022 -0300
+
+    Faltando apenas o layout do detalhe
+
+[33mcommit b9c2e2e5079a7b401b195e6dd87b5ed2a39a77c5[m
+Author: Luciano Garcia <lualgoritmo@outlook.com>
+Date:   Sun Jul 10 12:43:14 2022 -0300
+
+    Feito o recyclerview e o detalhe, faltando apenas alguns detalhes do layout
+
+[33mcommit df0e32eb6709c839355da32e15bdd50a53651da1[m
+Author: Luciano Garcia <lualgoritmo@outlook.com>
+Date:   Sat Jul 9 20:43:58 2022 -0300
+
+    Feito o recyclerView
+
+[33mcommit 5f4e82dc8ff2bb755a5a33f924bdf4b25f7c4219[m
+Author: Luciano Garcia <lualgoritmo@outlook.com>
+Date:   Sat Jul 9 19:44:12 2022 -0300
+
+     Ainda fazendo consumação de API
+
+[33mcommit 4c784882ea30fdb6045948c42ba07d9d2c8ecc58[m
+Author: Luciano Garcia <lualgoritmo@outlook.com>
+Date:   Sat Jul 9 17:02:06 2022 -0300
+
+    Iniciando a consumação de API
+
+[33mcommit 2af78b82955c63696e97db4189079cce789384ca[m
+Author: Luciano Garcia <lualgoritmo@outlook.com>
+Date:   Sat Jul 9 16:29:17 2022 -0300
+
+    Redme atualizado
+
+[33mcommit 8449d79006df4cf50bb4be0b0c0ec1f782e67ecb[m
+Author: Luciano Garcia <lualgoritmo@outlook.com>
+Date:   Sat Jul 9 15:49:33 2022 -0300
+
+    Adapter Completo, recyclerView completo,falta a consumação de API
+
+[33mcommit 73f41d9f33a90c5d5d917f1d71f4c30c4f7ff5a6[m
+Author: Luciano Garcia <lualgoritmo@outlook.com>
+Date:   Sat Jul 9 15:18:21 2022 -0300
+
+    Classe adapter feita, sem testar ainda
+
+[33mcommit 47e38f88e9877de00e2c676417a468ebed5796ab[m
+Author: Luciano Garcia <lualgoritmo@outlook.com>
+Date:   Sat Jul 9 14:48:43 2022 -0300
+
+    Feito o model da class Person
+
+[33mcommit dbd3dd4612837c1af5af37ed639089faff93356d[m
+Author: Luciano Garcia <lualgoritmo@outlook.com>
+Date:   Sat Jul 9 00:08:49 2022 -0300
+
+    Iniciando o Adapter
+
+[33mcommit d192050ad69312bcdbe58c7917dd36437d48aa87[m
+Author: Luciano Garcia <lualgoritmo@outlook.com>
+Date:   Fri Jul 8 23:58:22 2022 -0300
+
+    Começando a fazer o data source com erro
+
+[33mcommit e54ae11590a3e0097259c7bab9c64b7ac2dc96ab[m
+Author: Luciano Garcia <lualgoritmo@outlook.com>
+Date:   Fri Jul 8 22:55:26 2022 -0300
+
+    Criação da Pasta Constants
+
+[33mcommit 7fc979a29cbfe98ee503dc063b4d4e2395d6743a[m
+Author: Luciano Garcia <lualgoritmo@outlook.com>
+Date:   Fri Jul 8 20:16:56 2022 -0300
+
+    Lógica da home finalizada
+
+[33mcommit e38e2e00b01f73ad17c02a4a32352301342a80ab[m
+Author: Luciano Garcia <lualgoritmo@outlook.com>
+Date:   Fri Jul 8 20:11:51 2022 -0300
+
+    Layout finalizado
+
+[33mcommit fc459fd7dc43549a72420ba6767414988f297f9a[m
+Author: Luciano Garcia <lualgoritmo@outlook.com>
+Date:   Fri Jul 8 20:09:53 2022 -0300
+
+    Layout finalizado
+
+[33mcommit 6f800eb962c2f301f43869acd62b61e91c0eecd1[m
+Author: Luciano Garcia <lualgoritmo@outlook.com>
+Date:   Fri Jul 8 19:55:16 2022 -0300
+
+    Layout finalizado
+
+[33mcommit 167c5289ca14ec89c317234af2246c56de286801[m
+Author: Luciano Garcia <lualgoritmo@outlook.com>
+Date:   Fri Jul 8 19:02:17 2022 -0300
+
+    Iniciei a classe adapter
+
+[33mcommit 815802d06896f6c983a953589b4d81fa69f7ef23[m
+Author: Luciano Garcia <lualgoritmo@outlook.com>
+Date:   Fri Jul 8 18:55:43 2022 -0300
+
+    Ainda com erro
+
+[33mcommit 92288a79f515ff8fbd00e18bf7375669aacbb6d2[m
+Author: Luciano Garcia <lualgoritmo@outlook.com>
+Date:   Fri Jul 8 18:11:16 2022 -0300
+
+    Dando erro
+
+[33mcommit 4ce93903412961ded9873db26d40df4107f31089[m
+Author: Luciano Garcia <lualgoritmo@outlook.com>
+Date:   Fri Jul 8 16:46:58 2022 -0300
+
+    Tentando fazer
+
+[33mcommit 3f5c4f676a72391e13f6f4896d5ebb1daa4dfe3c[m
+Author: Luciano <66698662+lualgoritmo@users.noreply.github.com>
+Date:   Fri Jul 8 16:41:11 2022 -0300
+
+    Initial commit

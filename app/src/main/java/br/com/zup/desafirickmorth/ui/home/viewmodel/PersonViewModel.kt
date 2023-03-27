@@ -8,20 +8,17 @@ import br.com.zup.desafirickmorth.domain.useCase.PersonUseCase
 import br.com.zup.desafirickmorth.ui.home.viewstate.PersonViewState
 import kotlinx.coroutines.launch
 
-<<<<<<< HEAD
-class PersonViewModel(application: Application) : AndroidViewModel(application) {
-=======
-class PersonViewModel(private val useCase: PersonUseCase) : ViewModel() {
-
->>>>>>> 05d2221df9858be52e2e15e22c4669430a4f033f
+class PersonViewModel(
+    private val personUseCase: PersonUseCase
+) : ViewModel() {
     private val _personResponse = MutableLiveData<PersonViewState>()
     val personResponse: LiveData<PersonViewState> = _personResponse
 
-    fun getAllPeson() {
+    fun getAllPerson() {
         viewModelScope.launch {
             _personResponse.value = PersonViewState.Loading
             try {
-                 val response = useCase.getAllPerson()
+                val response = personUseCase.getAllPerson()
                 _personResponse.value = PersonViewState.Success(response)
             } catch (ex: Exception) {
                 _personResponse.value = PersonViewState.Error(ex.message ?: "Erro aqui")

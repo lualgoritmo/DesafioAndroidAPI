@@ -10,14 +10,13 @@ class PersonRepositoryImpl(
     private val remoteGetPerson: PersonRetrofitService
 ) : PersonRepository {
 
-    override suspend fun insertPersonDao(personList: List<PersonResult>) {
-        personDao.insertPersonDao(personList)
-    }
+    override suspend fun insertPersonDao(personList: List<PersonResult>) = personDao
+        .insertPersonDao(personList)
+
 
     override suspend fun getAllPerson(): RickAndMortyResponse {
         return remoteGetPerson.getAllPerson()
     }
 
-    override suspend fun getAllPersonDao(): List<PersonResult> =
-        personDao.getAllPersonDao()
+    override suspend fun getAllPersonDao(): List<PersonResult> = personDao.getAllPersonDao()
 }
