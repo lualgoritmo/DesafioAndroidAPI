@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import br.com.zup.desafirickmorth.R
 import br.com.zup.desafirickmorth.ui.home.view.HomeActivity
 import java.util.*
-//Fazendo aqui
+
 class SplashActivity : AppCompatActivity() {
     private val timer = Timer()
 
